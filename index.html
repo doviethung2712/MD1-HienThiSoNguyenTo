@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+
+    let so = prompt('Nhap Gia Tri')
+    let i;
+    let N = 2;
+    let songuyento = ""
+    for (i = 0; i < so;) {
+        let bt = true
+        for (j = 2; j < N; j++) {
+            if (N % j == 0) {
+                bt = false;
+                break;
+            }
+        }
+        if (bt == true) {
+            songuyento += N + "---";
+            i++;
+            N++;
+        } else {
+            N++;
+        }
+    }
+    document.write(songuyento)
+
+</script>
+</body>
+</html>
